@@ -1,0 +1,29 @@
+datediff() {
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+    echo $(( (d1 - d2) / 86400 )) days
+    ./jtalk.sh 目標の日まで$(( (d1 - d2) / 86400 +1))日です
+}
+#設定
+tday=$1
+today01=`date "+%m %d"`
+today=`date "+%Y"`
+#d=expr\( `date -d'2021/1/19' +%s` - `date -d'2021/1/16' +%s`\) 
+echo ${today01}
+echo ${tday}
+#datediff '19 Jan' '16 Jan'
+datediff ${tday} ${today01}
+tuki=`date "+%m"`
+hi=`date "+%d"`
+ji=`date "+%H"`
+fun=`date "+%M"`
+echo ${d}
+#echo ${tuki}+"がつ"+"日です。"
+#./jtalk.sh ${today}ねん${tuki}がつ${hi}にち
+#./jtalk.sh ${ji}じ${fun}ふんです
+#./jtalk.sh 次の入金日まで${d}日です
+
+#次の入金日まであと　日です。
+#残高は　XXXえんで一日あたりXX円使えます。
+
+
